@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+#welcome-message {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#welcome-message button {
+    display: block;
+    margin: 10px auto;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#congratulations-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.draggable {
+    display: block;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: grab;
+}
+
+.draggable {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: grab;
+    transition: transform 0.3s;
+}
+
+.draggable:hover {
+    transform: scale(1.1);
+}
+
+.category {
+    width: 200px;
+    height: 100px;
+    border: 2px dashed #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+.category:empty::after {
+    content: "";
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;

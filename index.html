@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Éducatif Moov'Numeric</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-message">
+        <p>Bienvenue sur le Jeu Éducatif Moov'Numeric ! 🎉<br>
+        À l'occasion du 1er anniversaire du CAP à Metz, nous t'invitons à tester tes connaissances sur la sécurité numérique !<br>
+        Glisse les phrases dans les bonnes catégories et montre que tu es un expert du numérique !</p>
+        <button onclick="startGame()">OK</button>
+    </div>
+
+    <div id="game-container" style="display:none;">
+        <h2>Classement des joueurs</h2>
+        <ul id="leaderboard"></ul>
+
+        <h3>Glisse chaque phrase dans la bonne catégorie :</h3>
+        <div id="questions"></div>
+        <div id="score-display">Score: 0</div>
+
+        <div id="categories">
+            <div class="category" data-category="Sécurité des mots de passe">Sécurité des mots de passe</div>
+            <div class="category" data-category="Réseaux sociaux">Réseaux sociaux</div>
+            <div class="category" data-category="Logiciels et antivirus">Logiciels et antivirus</div>
+            <div class="category" data-category="Dangers en ligne">Dangers en ligne</div>
+            <div class="category" data-category="Bonnes pratiques">Bonnes pratiques</div>
+        </div>
+        
+        <button onclick="checkAnswers()">Je vérifie</button>
+    </div>
+
+    <div id="congratulations-message" style="display:none;">
+        <p>Félicitations ! 🎉<br>Votre score : <span id="final-score"></span></p>
+        <input type="text" id="player-name" placeholder="Entrez votre pseudo">
+        <button onclick="saveScore()">Enregistrer</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
